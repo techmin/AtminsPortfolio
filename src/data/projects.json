@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "title": "Langportal",
+    "description": "Translation model using Hugging Face Transformers.",
+    "techStack": ["Python", "TypeScript", "Node", "Hugging Face", "AWS"],
+    "github": "https://github.com/bluestarburst/LangPortal",
+    "demo": "https://hargreaves.dev/LangPortal/",
+    "image": "./LP.png"
+  },
+  {
+    "id": 2,
+    "title": "Asphisia ungergrad research",
+    "description": "Capture notes with images and OCR, searchable by content.",
+    "techStack": ["Python", "Pytorch", "Hugging Face", "OpenAI"],
+    "github": "",
+    "demo": "https://huggingface.co/techSnipe/whisper-large-v2-hi-Atmin",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1280&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "title": "ecomerce website ",
+    "description": "Practice ecomerce website with React and TypeScript using Material UI and Fakestore API",
+    "techStack": ["React", "TypeScript", "Anime.js"],
+    "github": "https://github.com/techmin/Shoping_Cart",
+    "demo": "",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1280&auto=format&fit=crop"
+  },
+  {
+    "id": 4,
+    "title": "Machine learning portfolio ",
+    "description": "collection of machine learning projects, enhancing fundamental machine learning concepts",
+    "techStack": ["Python","R","skiblib","pandas"],
+    "github": "https://github.com/techmin/CS4375_Machine_Learning",
+    "demo": "",
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1280&auto=format&fit=crop"
+  },
+  {
+    "id": 5,
+    "title": "Solar War Game",
+    "description": "online multiplayer game set in interstellar space, player cann with by concuring the whole solar system. ",
+    "techStack": ["C#","network"],
+    "github": "https://github.com/techmin/Solar-War",
+    "demo": ""  ,
+    "image": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1280&auto=format&fit=crop"
+  }
+]
+
