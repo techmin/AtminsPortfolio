@@ -17,7 +17,7 @@ function Projects(): React.ReactElement {
 
   return (
     <div>
-      <h2 style={{ margin: 0, marginBottom: 12, color: '#e6e9ef' }}>Projects</h2>
+      <h2 style={{ margin: 0, marginBottom: 12,fontFamily:'fantasy',fontSize:'90px', color: '#1114c7b3' }}>Projects</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: '16px' }}>
         {(projects as Project[]).map((p) => (
           <article 

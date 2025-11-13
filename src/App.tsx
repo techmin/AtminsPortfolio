@@ -4,7 +4,9 @@ import About from './components/About';
 import Projects from './components/Projects';
 import ClimbTracker from './components/ClimbTracker';
 import ContactForm from './components/contactForm';
-
+// @ts-ignore: CSS import has no type declarations
+import 'bulma/css/bulma.min.css';
+ 
 const prf = './prf.jpg';
 function App(): React.ReactElement {
   console.log('App rendering');
@@ -12,7 +14,7 @@ function App(): React.ReactElement {
     
     <div className="container" style={{ minHeight: '100vh', padding: '24px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
-        <a href="https://www.linkedin.com/in/atmins/">Linkedin</a>
+        <a className="button is-link" href="https://www.linkedin.com/in/atmins/">Linkedin</a>
       </div>  
       <header className="section">
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
@@ -43,23 +45,71 @@ function App(): React.ReactElement {
         <section className="section" style={{ margin: '40px 0' }}>
           <About />
         </section>
+          <div
+      
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+      marginBottom: "16px",
+      marginLeft: "50%",
+    }}
+  >
+    <a
+      href="https://drive.google.com/file/d/1gOD0PeRg6fAh_VOtontmFF6p1SHilZsG/view?usp=sharing"
+      className="button is-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
+  </div>
 
         <section className="section" style={{ margin: '40px 0' }}>
           <Projects />
         </section>
-        <section className="section" style={{ margin: '40px 0' }}>
-          <ContactForm />
-        </section>
+
       </main>
-  
-      <div className='container'>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
-        <a href="https://www.linkedin.com/in/atmins/">Linkedin</a>
-      </div>
-       <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
-        <a href="https://drive.google.com/file/d/1gOD0PeRg6fAh_VOtontmFF6p1SHilZsG/view?usp=sharing">Resume</a>
-      </div>
-    </div>
+      
+  <div className="columns is-centered">
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+      marginBottom: "16px",
+      marginRight: "10%",
+    }}
+  >
+    <a
+      href="https://www.linkedin.com/in/atmins/"
+      className="button is-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      LinkedIn
+    </a>
+  </div>
+
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+      marginBottom: "16px",
+    }}
+  >
+    <a
+      href="https://drive.google.com/file/d/1gOD0PeRg6fAh_VOtontmFF6p1SHilZsG/view?usp=sharing"
+      className="button is-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Resume
+    </a>
+  </div>
+</div>
+
     </div>
   );
 }

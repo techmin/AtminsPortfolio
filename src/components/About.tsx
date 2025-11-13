@@ -1,4 +1,5 @@
 import React from 'react';
+import { splitText } from 'animejs';
 
 const aboutText = `I'm Atmin Sheth, a passionate software developer who loves building products that make life easier and more meaningful. I enjoy turning ideas into real, impactful solutions — from intuitive web apps to efficient systems that help people live better every day. Always curious, I’m constantly learning new technologies and sharing my knowledge and collaborations.
 
