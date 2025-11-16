@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/techmin/AtminsPortfolio/issues"
   },
-  "homepage": "https://github.com/techmin/AtminsPortfolio",
+  "homepage": "https://techmin.github.io/AtminsPortfolio",
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "animejs": "^4.2.2",
