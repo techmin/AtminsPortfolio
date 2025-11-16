@@ -61,7 +61,7 @@ function App(): React.ReactElement {
     }}
   >
     <a
-      href="https://drive.google.com/file/d/1gOD0PeRg6fAh_VOtontmFF6p1SHilZsG/view?usp=sharing"
+      href="https://drive.google.com/file/d/1VWEV99CYiDMYtExnoYoircuRWjg7ZHpG/view?usp=sharing"
       className="button is-link"
       target="_blank"
       rel="noopener noreferrer"
@@ -112,7 +112,7 @@ function App(): React.ReactElement {
     }}
   >
     <a
-      href="https://drive.google.com/file/d/1gOD0PeRg6fAh_VOtontmFF6p1SHilZsG/view?usp=sharing"
+      href="https://drive.google.com/file/d/1VWEV99CYiDMYtExnoYoircuRWjg7ZHpG/view?usp=sharing"
       className="button is-link"
       target="_blank"
       rel="noopener noreferrer"
