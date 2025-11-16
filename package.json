@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
   "scripts": {
     "start": "webpack serve --mode development --open --port 3002",
     "build": "webpack --mode production",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/techmin/AtminsPortfolio/issues"
   },
-  "homepage": "https://github.com/techmin/AtminsPortfolio#readme",
+  "homepage": "https://github.com/techmin/AtminsPortfolio",
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "animejs": "^4.2.2",
@@ -31,6 +32,7 @@
     "@types/react-dom": "^19.2.2",
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.4",
     "source-map-loader": "^5.0.0",
     "style-loader": "^4.0.0",
