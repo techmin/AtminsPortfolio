@@ -1,123 +1,145 @@
-// components/ContactForm.tsx
-import React, { useState } from "react";
+import React, { Component } from "react";
 
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzzvbpqn"; // Replace with your own endpoint
-
-interface FormData {
+interface ContactFormState {
   name: string;
   email: string;
-  company: string;
-  question: string;
-  additional_info?: string;
+  message: string;
+  status: "" | "sending" | "success" | "error";
 }
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    company: "",
-    question: "",
-    additional_info: "",
-  });
+class ContactForm extends Component<{}, ContactFormState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      message: "",
+      status: "",
+    };
+  }
 
-  const [status, setStatus] = useState<string | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const name = e.target.name as keyof ContactFormState;
+    const value = e.target.value;
+    this.setState(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    setStatus("sending");
+    this.setState({ status: "sending" });
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch("https://formspree.io/f/xyzlkjvw", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          ...formData,
-          _subject: `New Question from ${formData.name} (${formData.company})`,
+          name: this.state.name,
+          email: this.state.email,
+          message: this.state.message,
         }),
       });
 
       if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", company: "", question: "", additional_info: "" });
+        this.setState({
+          name: "",
+          email: "",
+          message: "",
+          status: "success",
+        });
       } else {
-        setStatus("error");
+        this.setState({ status: "error" });
       }
-    } catch (error) {
-      console.error("Email send failed:", error);
-      setStatus("error");
+    } catch {
+      this.setState({ status: "error" });
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit} className="space-y-4 p-4 rounded-2xl shadow-md max-w-md mx-auto">
-      <h2 className="text-xl font-semibold text-center">📧 Contact Me</h2>
+  render() {
+    return (
+      <div className="container" style={{ maxWidth: "500px" }}>
+        <h2 className="title is-4">Contact Me</h2>
 
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name"
-        value={formData.name}
-        onChange={handleChange}
-        className="w-full border p-2 rounded"
-        required
-      />
+        <form onSubmit={this.handleSubmit}>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email"
-        value={formData.email}
-        onChange={handleChange}
-        className="w-full border p-2 rounded"
-        required
-      />
+          {/* Name */}
+          <div className="field">
+            <label className="label">Name</label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={this.state.name}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+          </div>
 
-      <input
-        type="text"
-        name="company"
-        placeholder="Your company / org"
-        value={formData.company}
-        onChange={handleChange}
-        className="w-full border p-2 rounded"
-      />
+          {/* Email */}
+          <div className="field">
+            <label className="label">Email</label>
+            <div className="control">
+              <input
+                className="input"
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={this.state.email}
+                onChange={this.handleChange}
+                required
+              />
+            </div>
+          </div>
 
-      <textarea
-        name="question"
-        placeholder="Your question"
-        value={formData.question}
-        onChange={handleChange}
-        className="w-full border p-2 rounded"
-        required
-      />
+          {/* Message */}
+          <div className="field">
+            <label className="label">Message</label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                name="message"
+                placeholder="Your Message"
+                rows={5}
+                value={this.state.message}
+                onChange={this.handleChange}
+                required
+              ></textarea>
+            </div>
+          </div>
 
-      <textarea
-        name="additional_info"
-        placeholder="Additional info (optional)"
-        value={formData.additional_info}
-        onChange={handleChange}
-        className="w-full border p-2 rounded"
-      />
+          {/* Submit Button */}
+          <div className="field">
+            <div className="control">
+              <button
+                className="button is-link"
+                type="submit"
+                disabled={this.state.status === "sending"}
+              >
+                {this.state.status === "sending" ? "Sending..." : "Send Message"}
+              </button>
+            </div>
+          </div>
+        </form>
 
-      <button
-        type="submit"
-        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
-        disabled={status === "sending"}
-      >
-        {status === "sending" ? "Sending..." : "Send Message"}
-      </button>
-
-      {status === "success" && (
-        <p className="text-green-600 text-center mt-2">✅ Message sent successfully!</p>
-      )}
-      {status === "error" && (
-        <p className="text-red-600 text-center mt-2">❌ Failed to send message. Try again later.</p>
-      )}
-    </form>
-  );
-};
+        {/* Messages */}
+        {this.state.status === "success" && (
+          <p className="has-text-success" style={{ marginTop: "10px" }}>
+            Message sent successfully! 🎉
+          </p>
+        )}
+        {this.state.status === "error" && (
+          <p className="has-text-danger" style={{ marginTop: "10px" }}>
+            Something went wrong. Please try again.
+          </p>
+        )}
+      </div>
+    );
+  }
+}
 
 export default ContactForm;

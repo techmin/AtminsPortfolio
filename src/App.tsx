@@ -1,9 +1,9 @@
 import React from 'react';
 import About from './components/About';
-
+import ContactForm from './components/contactForm';
 import Projects from './components/Projects';
 import ClimbTracker from './components/ClimbTracker';
-import ContactForm from './components/contactForm';
+import Freelancing from '@components/Freelance';
 // @ts-ignore: CSS import has no type declarations
 import 'bulma/css/bulma.min.css';
  
@@ -11,15 +11,20 @@ const prf = './prf.jpg';
 function App(): React.ReactElement {
   console.log('App rendering');
   return (
-    
+
     <div className="container" style={{ minHeight: '100vh', padding: '24px' }}>
+       <div className='columns'>
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
         <a className="button is-link" href="https://www.linkedin.com/in/atmins/">Linkedin</a>
-      </div>  
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px', marginLeft: '10px' }}>
+        <a className="button is-link" href="https://atmindancesworld.blogspot.com/">Dance Blog</a>
+      </div> 
+      </div>
       <header className="section">
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '16px' }}>
           <img 
-            src={prf}
+            src="https://avatars.githubusercontent.com/u/46662857?type=square&v=4"
             alt="Asta Staria" 
             style={{
               width: '200px',
@@ -65,8 +70,15 @@ function App(): React.ReactElement {
     </a>
   </div>
 
-        <section className="section" style={{ margin: '40px 0' }}>
+        <section className="section" style={{ margin: '20px 0' }}>
           <Projects />
+        </section>
+
+        <section className="section" style={{ margin: '20px 0' }}>
+          <Freelancing />
+        </section>
+        <section className="section" style={{ margin: '20px 0' }}>
+          <ContactForm />
         </section>
 
       </main>
@@ -108,6 +120,36 @@ function App(): React.ReactElement {
       Resume
     </a>
   </div>
+    <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+      marginBottom: "16px",
+      marginLeft: "10%",
+    }}
+  >
+    <a
+      href="https://github.com/techmin"
+      className="button is-link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Github
+    </a>
+  </div>
+  <div 
+   style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "20px",
+      marginBottom: "16px",
+      marginLeft: "10%",
+    }}
+  >
+
+        <a className="button is-link" href="https://atmindancesworld.blogspot.com/">Dance Blog</a>
+      </div> 
 </div>
 
     </div>

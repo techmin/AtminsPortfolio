@@ -43,6 +43,31 @@
     "github": "https://github.com/techmin/Solar-War",
     "demo": ""  ,
     "image": "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?q=80&w=1280&auto=format&fit=crop"
+  },
+  {
+    "id": 6,
+    "title": "Chatbot Applications",
+    "description": "Multitple chatbot applications using botpress and Langchain frameworks. From my time at eXp Realty and personal .",
+    "techStack": ["React", "TypeScript", "Anime.js"],
+    "github": "https://github.com/techmin/chatWresume",
+    "image":"https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2025/03/marquee-agentforce-ai-chatbot.png?w=1024"
+  },
+  {
+    "id": 7,
+    "title": "Emotion GPT",
+    "description": "A Speech recogition and emotion detection app using OpenAI Whisper, spectogram and flask. Mentored team of 4 as a part of Artificial Intelligence Society Mentorship program.",
+    "techStack": ["Python","Flask","OpenAI","Whisper"],
+    "github": "https://github.com/ibrahim7860/emotiongpt",
+    "image":"https://img.freepik.com/premium-vector/speech-bubble-with-emotions-icon-set-vector-set-cartoon-character-sentiment-icon_685565-23.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Personal Portfolio",
+    "description": "My personal portfolio website built with React and TypeScript, showcasing my projects and skills.",
+    "techStack": ["React", "TypeScript", "Anime.js","Bulma.io"],
+    "github": "https://github.com/techmin/AtminsPortfolio",
+    "image":"https://images.unsplash.com/photo-1506765515384-028b60a970df?q=80&w=1280&auto=format&fit=crop"
   }
+
 ]
 

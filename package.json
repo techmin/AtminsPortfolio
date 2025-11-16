@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/techmin/AtminsPortfolio#readme",
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "animejs": "^4.2.2",
     "bulma": "^1.0.4",
     "react": "^19.2.0",
