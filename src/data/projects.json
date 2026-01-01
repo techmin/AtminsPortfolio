@@ -32,7 +32,7 @@
     "description": "collection of machine learning projects, enhancing fundamental machine learning concepts",
     "techStack": ["Python","R","skiblib","pandas"],
     "github": "https://github.com/techmin/CS4375_Machine_Learning",
-    "demo": "",
+    "demo": "https://techmin.github.io/CS4375_Machine_Learning/",
     "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1280&auto=format&fit=crop"
   },
   {
