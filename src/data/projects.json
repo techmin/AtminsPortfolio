@@ -61,7 +61,17 @@
     "image":"https://img.freepik.com/premium-vector/speech-bubble-with-emotions-icon-set-vector-set-cartoon-character-sentiment-icon_685565-23.jpg"
   },
   {
-    "id": 8,
+    "id":8,
+    "title": "Stock Tracker",
+    "description": "Stock Prediction model utilizing MCP Server to pull data and evaluate with analitics to suggest Buy or Sell stocks",
+    "techStack":["Pyton","MCP Server","Guvicorn"],
+    "github": "https://github.com/techmin/stockTracker-/tree/master",
+    "demo": "https://stocktracker-hzej.onrender.com/",
+    "image": "https://www.forward.bank/wp-content/uploads/2025/04/investing-in-stock-market-screen.jpg"
+  
+  },
+  {
+    "id": 9,
     "title": "Personal Portfolio",
     "description": "My personal portfolio website built with React and TypeScript, showcasing my projects and skills.",
     "techStack": ["React", "TypeScript", "Anime.js","Bulma.io"],
