@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
     clean: true,
-    publicPath: "/AtminsPortfolio/"
+    publicPath: "auto"
 
   },
   resolve: {
@@ -45,7 +45,8 @@ module.exports = {
       {
         test: /\.js$/,
         enforce: 'pre',
-        use: ['source-map-loader']
+        use: ['source-map-loader'],
+        exclude: /node_modules/
       }
     ]
   },
